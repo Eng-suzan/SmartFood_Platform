@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{base_url}}/api/register"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Sozy\",\r
+
+    \    \"phone\": \"01012345678\"\r
+
+    }"
+order: 1788463553903

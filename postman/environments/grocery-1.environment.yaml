@@ -1,0 +1,4 @@
+name: grocery
+values:
+  - key: base_url
+    value: ''
