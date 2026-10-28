@@ -1,59 +1,141 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🍔 Smart Food AI
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### AI-Powered Food Ordering Platform
 
-## About Laravel
+Smart Food AI is a web-based food ordering platform built with **Laravel, PHP, and MySQL**. It provides separate role-based experiences for customers, restaurant owners, and administrators, alongside an AI-powered chatbot that helps users discover food options and explore restaurant menus.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The platform integrates **Google Gemini AI** for conversational food assistance and **PayPal** to demonstrate the online payment workflow in a testing environment.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 👤 1. Customer
+- Register and log in to a customer account.
+- Browse restaurants and explore food menus.
+- View food items, prices, and availability.
+- Place food orders and track order statuses.
+- Choose between PayPal and cash payment methods.
+- Chat with the AI assistant to discover meals and get food recommendations.
 
-## Learning Laravel
+### 🏪 2. Restaurant Owner
+- Register and log in as a restaurant owner.
+- Manage restaurant information.
+- Add and update food menu items.
+- Manage food prices and availability.
+- View customer orders and update their statuses.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 🛡️ 3. Admin
+- Access the administration dashboard.
+- Oversee platform operations.
+- Manage platform data according to assigned permissions.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🤖 4. AI-Powered Chatbot
+- Integrated with the Google Gemini API.
+- Supports conversational interaction for food discovery.
+- Helps customers explore menu options and find suitable meals.
+- Designed to provide relevant recommendations using application data.
 
-## Laravel Sponsors
+### 💳 5. Payment Integration
+- PayPal integration for testing and demonstrating the online payment workflow.
+- Cash payment option.
+- Payment records containing amounts, methods, statuses, transaction references, and timestamps.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+> **Note:** PayPal is integrated for testing purposes; the project does not claim to process real-money transactions.
 
-### Premium Partners
+## 🛠️ Technologies Used
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+| Technology | Purpose |
+|---|---|
+| PHP | Backend programming language |
+| Laravel | Web application framework |
+| MySQL | Relational database |
+| Google Gemini API | AI chatbot integration |
+| PayPal | Payment workflow integration for testing |
+| HTML5 | Page structure |
+| CSS3 | Styling |
+| JavaScript | Frontend interactivity |
+| Bootstrap | Responsive UI design |
 
-## Contributing
+## ⚙️ Installation and Setup
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prerequisites
+- PHP
+- Composer
+- MySQL
+- Node.js and npm
+- A Google Gemini API key
 
-## Code of Conduct
+### Steps
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**1. Clone the repository**
 
-## Security Vulnerabilities
+```bash
+git clone https://github.com/Eng-suzan/SmartFood_Platform.git
+cd SmartFood_Platform
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**2. Install PHP dependencies**
 
-## License
+```bash
+composer install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**3. Configure the environment**
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Configure your database credentials and API settings in the `.env` file.
+
+**4. Run database migrations**
+
+```bash
+php artisan migrate
+```
+
+If the project includes seeders, run them when appropriate:
+
+```bash
+php artisan db:seed
+```
+
+**5. Install frontend dependencies**
+
+```bash
+npm install
+npm run build
+```
+
+**6. Start the development server**
+
+```bash
+php artisan serve
+```
+
+Open the local URL displayed in your terminal to access the application.
+
+## 🔐 Environment Configuration
+
+Configure the required environment variables according to the integrations implemented in the project.
+
+- Database connection settings.
+- Google Gemini API key.
+- PayPal credentials and environment settings, if required by the implementation.
+
+**Important:** Never commit `.env` files, API keys, PayPal credentials, or other secrets to GitHub.
+
+## 🎯 Project Objective
+
+The goal of Smart Food AI is to improve the online food ordering experience by combining restaurant and menu management, customer ordering, administrative functionality, AI-assisted food discovery, and payment workflow integration in one platform.
+
+## 👩‍💻 Developer
+
+**Suzan Reda**
+
+- GitHub: [Eng-suzan](https://github.com/Eng-suzan)
+- Project Repository: [SmartFood_Platform](https://github.com/Eng-suzan/SmartFood_Platform)
+
+---
+
+*Developed as a Laravel web application integrating AI-assisted food discovery and online payment workflow testing.*
